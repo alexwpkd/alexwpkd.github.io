@@ -1234,7 +1234,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .producto-titulo {
-  color: #999999; /* Elige el color que prefieras */
+  color: #999999;
 }
 
 .product-image img:hover {
@@ -2023,6 +2023,11 @@ span.comment-date {
   color: #051922;
   font-weight: 600;
   opacity: 0.5;
+}
+
+.descripcion-productos {
+  color: #999999;
+  font-size: 20px;
 }
 
 p.testimonial-body {
