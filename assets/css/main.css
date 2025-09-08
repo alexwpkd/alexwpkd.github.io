@@ -2565,13 +2565,13 @@ td.product-image img {
 }
 
 .cart-table-wrap tbody tr td {
-  border: 1px solid #efefef;
+  border: 1px solid #0D0D0D;
   padding: 20px 0;
   color: #051922;
 }
 
 thead.cart-table-head tr {
-  background-color: #efefef;
+  background-color: #c0c0c0;
 }
 
 td.product-quantity input {
@@ -2794,4 +2794,23 @@ table.order-details tbody td {
 
 .client-role {
   color: #999999;
+}
+
+.table-body-row td {
+  color: #0D0D0D; /* Cambia este valor por el color de letra que prefieras */
+  background-color: #737373;
+}
+
+/* Opcional: para cambiar el color de los íconos de eliminar */
+.table-body-row .product-remove i {
+  color: #d32f2f;
+}
+
+.total-data td {
+  color: #737373;
+  background-color: #737373;
+}
+
+.total-data strong {
+  color: #0D0D0D;
 }
