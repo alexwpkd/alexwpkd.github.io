@@ -4,6 +4,7 @@ function valid_datas(f) {
     // Expresiones regulares
     const rutRegex = /^[0-9]{7,8}[0-9Kk]{1}$/;
     const correoRegex = /^([\w\.\-]+)@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Min 8, letra y número
 
     // Validaciones
     if (f.name.value.trim() === '' || f.name.value.length > 50) {
@@ -27,6 +28,9 @@ function valid_datas(f) {
     } else if (f.address.value.trim() === '' || f.address.value.length > 300) {
         jQuery('#form_status').html('<span class="wrong">Dirección obligatoria y máximo 300 caracteres.</span>');
         notice(f.address);
+    } else if (f.password.value.trim() === '' || !passwordRegex.test(f.password.value.trim())) {
+        jQuery('#form_status').html('<span class="wrong">Contraseña obligatoria, mínimo 8 caracteres, al menos una letra y un número.</span>');
+        notice(f.password);
     } else {
         // Guardar datos
         registros.push({
@@ -36,7 +40,8 @@ function valid_datas(f) {
             correo: f.email.value.trim(),
             region: f.region.value.trim(),
             comuna: f.subject.value.trim(),
-            direccion: f.address.value.trim()
+            direccion: f.address.value.trim(),
+            password: f.password.value.trim()
         });
         jQuery('#form_status').html('<span class="success">Registro exitoso!</span>');
         f.reset();
